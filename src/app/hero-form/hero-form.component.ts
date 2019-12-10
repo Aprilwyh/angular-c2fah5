@@ -19,6 +19,7 @@ export class HeroFormComponent {
   onSubmit() { this.submitted = true; }
 
   // TODO: Remove this when we're done
+  // 添加一个 diagnostic 属性，以返回这个模型的 JSON 形式
   get diagnostic() { return JSON.stringify(this.model); }
 
   newHero() {
