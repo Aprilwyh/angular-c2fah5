@@ -12,7 +12,8 @@ export class HeroFormComponent {
   powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
 
-  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  // 这里设置输入框/下拉框的默认值
+  model = new Hero(18, '一个人名', this.powers[3], 'Chuck Overstreet');
 
   submitted = false;
 

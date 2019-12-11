@@ -4,10 +4,13 @@
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
+        <!-- 为什么#name="ngModel"？ 
+        指令的 exportAs 属性告诉 Angular 如何链接模板引用变量到指令。 这里把 name 设置为 ngModel 是因为 ngModel 指令的 exportAs 属性设置成了 “ngModel”。 -->
         <input type="text" class="form-control" id="name"
                required
                [(ngModel)]="model.name" name="name"
                #name="ngModel">
+        <!-- 控件是有效的 (valid) 或全新的 (pristine) 时，隐藏消息 -->
         <div [hidden]="name.valid || name.pristine"
              class="alert alert-danger">
           Name is required
